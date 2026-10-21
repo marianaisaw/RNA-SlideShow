@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RADAR sensor structures</title>
+  <link rel="stylesheet" href="vendor/fornac.css" />
+  <link rel="stylesheet" href="styles.css?v=14" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <p class="kicker">Structural analysis</p>
+        <p class="brand-title">Minimum free energy structures</p>
+      </div>
+      <p class="count" id="count" aria-live="polite">1 / 24</p>
+    </header>
+    <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+
+    <div class="workspace">
+      <nav class="rail" id="rail" aria-label="Sensor candidates"></nav>
+
+      <main class="slide" id="slide">
+        <div class="hero" id="hero">
+          <h1 id="title">Loading</h1>
+        </div>
+
+        <section class="figure" aria-label="Minimum free energy structure">
+          <div class="stage-row">
+            <button type="button" id="prev" class="nav-arrow" aria-label="Previous sensor">
+              <span class="nav-glyph" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26"><path d="M14.5 5.5 L8 12 L14.5 18.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="nav-meta">
+                <span class="step-label">Previous</span>
+                <span class="step-name" id="prev-name"></span>
+              </span>
+            </button>
+            <div id="stage"></div>
+            <button type="button" id="next" class="nav-arrow" aria-label="Next sensor">
+              <span class="nav-glyph" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26"><path d="M9.5 5.5 L16 12 L9.5 18.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="nav-meta">
+                <span class="step-label">Next</span>
+                <span class="step-name" id="next-name"></span>
+              </span>
+            </button>
+          </div>
+          <div class="figure-tools">
+            <button type="button" id="reset" class="text-btn">Reset layout</button>
+          </div>
+          <div class="legend">
+            <span>0 uncertain</span>
+            <div class="bar"></div>
+            <span>1 likely</span>
+          </div>
+          <p class="error" id="error" role="alert"></p>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="vendor/fornac.js"></script>
+  <script src="data/sensors.js"></script>
+  <script src="app.js?v=19"></script>
+</body>
+</html>
